@@ -7,7 +7,7 @@
   font-size: 2em;
 }
 .section{
-    padding-top: calc(var(--header-height) + 4em);
+  padding-top: calc(var(--header-height) + 2em);
 
   padding-left: 1em;
   padding-right: 1em;
@@ -72,4 +72,7 @@
       object-position: center;
     }
   }
+}
+.section-title{
+  margin-top: 3rem !important;
 }

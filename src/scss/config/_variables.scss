@@ -9,7 +9,7 @@ $rot: 30deg;
 $linear-gradient: linear-gradient(to right, #3264f5 2%, #7004bc 82%);
 
 :root{
-  --header-height: 50px;
+  --header-height: 70px;
   --footer-height: 50px;
 
   @include from (l){

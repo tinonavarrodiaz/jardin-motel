@@ -1,4 +1,7 @@
 .contact{
+  @include from(xl){
+    margin-bottom: 15vh;
+  };
   iframe{
     width: 100%;
     // @include from(l){

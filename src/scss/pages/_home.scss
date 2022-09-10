@@ -51,14 +51,18 @@
 }
 
 .bottom-bar{
+  position: absolute;
+  bottom:0;
+  width: 100%;
+  z-index: 1000;
   height: var(--header-height);
   background-color: #1c1e22;;
   display: grid;
   grid-template-columns: 100px 1fr auto;
   @media screen and (max-width: 768px) and (orientation: portrait) {
-    position: relative;
-    transform: translateY(-100px);
-    z-index: 10000;
+    // position: absolute;
+    // transform: translateY(-100px);
+    // z-index: 10000;
   }
   .arrows{
 

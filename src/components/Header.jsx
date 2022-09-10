@@ -31,6 +31,9 @@ const Header = () => {
     e.preventDefault();
     const Target = e.target;
     if (Target.tagName === 'A') {
+      console.dir(Target.parentElement.parentElement);
+      // Target.parentElement.parentElement.classList.remove('is-active');
+      Target.parentElement.parentElement.previousElementSibling.click();
       const href = Target.getAttribute('href');
       console.dir(href);
       const offsetTop = document.querySelector(href).offsetTop;
@@ -41,9 +44,23 @@ const Header = () => {
     }
   };
 
+  const top = (e) => {
+    e.preventDefault();
+    const Target = e.target;
+
+    const href = Target.getAttribute('href')
+      ? Target.getAttribute('href')
+      : Target.parentElement.getAttribute('href');
+    const offsetTop = document.querySelector(href).offsetTop;
+    scroll({
+      top: offsetTop,
+      behavior: 'smooth',
+    });
+  };
+
   return (
     <header className="Header" ref={header}>
-      <a href="#inicio" className="main-title">
+      <a href="#inicio" className="main-title" onClick={top}>
         <img src={logo} alt="" />
         <span>
           Carretera a Saltillo (Prolongacion Alcalde) No. 86, Col. El Batan,

@@ -51,8 +51,12 @@
   z-index: 6000;
   height: 2em;
   width: 6em;
-  display: flex;
   justify-content:space-around;
+  display: none;
+  @include from(l){
+    display: flex;
+  }
+
   button{
     height: 100%;
     width: 40%;
