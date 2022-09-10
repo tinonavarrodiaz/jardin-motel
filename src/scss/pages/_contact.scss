@@ -1,0 +1,41 @@
+.contact{
+  iframe{
+    width: 100%;
+    // @include from(l){
+    //   width: unset;
+    // }
+  }
+  h3{
+    font-size: 1.5em;
+    text-transform: uppercase;
+  }
+  &-grid{
+    @include from(l){
+      display: grid;
+      grid-template-columns: 60% 1fr;
+      grid-column-gap: 3em;
+    }
+  }
+  &-details{
+    text-align: center;
+    @include from(l){
+      text-align: left;
+    }
+    ul{
+      color: rgba(#fff,.6);
+      li{
+        line-height: 2.5em;
+      }
+
+    }
+
+  }
+}
+.mail-link{
+  color: hsl(24, 100%, 50%);
+  transition: color .3s;
+
+  &:hover {
+    color: hsl(24, 100%, 90%);
+    }
+}

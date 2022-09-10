@@ -1,0 +1,98 @@
+.modal {
+  --width: 4em;
+  --transparent: .75;
+  --color-modal: hsla(220, 9%, 20%, var(--transparent));
+  background-color: rgba(#000,.75);
+  fill: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  z-index: 15000;
+
+  button {
+    width: var(--width);
+    height: var(--width);
+    background-color: var(--color-modal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: absolute;
+    cursor: pointer;
+
+    svg {
+      width: 60%;
+    }
+
+  }
+
+  &-close {
+    top: 0;
+    right: 0;
+  }
+
+  &-content {
+    --transparent: 1;
+    position: relative;
+    width: 90%;
+    max-width: 700px;
+    transform: translateX(20%);
+    opacity: 0;
+    animation: show .2s ease-in-out forwards;
+    box-shadow: 0 0 0 10px hsla(220, 9%, 20%, 1);
+    p{
+      background-color: hsla(220, 9%, 20%, 1);
+      line-height: 3em;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 1.2em;
+      margin-bottom: 0;
+    }
+
+    @keyframes show {
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &.portrait {
+      width: auto;
+      height: 70%;
+      max-height: 700px;
+
+      img {
+        width: auto;
+        height: calc(100% - 3em);
+      }
+    }
+  }
+
+  .modal-btn {
+    top: 50%;
+    transform: translateY(-50%);
+
+    svg {
+      width: auto;
+      height: 60%;
+      transform: translateX(-10%);
+    }
+
+    &.next {
+      right: 0;
+
+      svg {
+        transform: translateX(10%);
+      }
+    }
+  }
+}

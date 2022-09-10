@@ -1,0 +1,43 @@
+{
+  "master" : [
+    {
+      "master1": "/img/habitaciones/master1.jpg",
+      "master2": "/img/habitaciones/master2.jpg",
+      "master3": "/img/habitaciones/master3.jpg",
+      "master4": "/img/habitaciones/master4.jpg",
+      "master5": "/img/habitaciones/master5.jpg"
+    }
+  ],
+  "jacuzzi" : [
+    {
+      "jacuzzi1": "/img/habitaciones/jacuzzi1.jpg",
+      "jacuzzi2": "/img/habitaciones/jacuzzi2.jpg",
+      "jacuzzi3": "/img/habitaciones/jacuzzi3.jpg",
+      "jacuzzi4": "/img/habitaciones/jacuzzi4.jpg",
+      "jacuzzi5": "/img/habitaciones/jacuzzi5.jpg"
+    }
+  ],
+  "lujo" : [
+    {
+      "lujo1": "/img/habitaciones/lujo1.jpg",
+      "lujo2": "/img/habitaciones/lujo2.jpg",
+      "lujo3": "/img/habitaciones/lujo3.jpg",
+      "lujo4": "/img/habitaciones/lujo4.jpg",
+      "lujo5": "/img/habitaciones/lujo5.jpg"
+    }
+  ],
+  "normal" : [
+    {
+      "normal1": "/img/habitaciones/normal1.jpg",
+      "normal2": "/img/habitaciones/normal2.jpg",
+      "normal3": "/img/habitaciones/normal3.jpg",
+      "normal4": "/img/habitaciones/normal4.jpg"
+    }
+  ],
+  "sencilla" : [
+    {
+      "sencilla1": "/img/habitaciones/sencilla1.jpg",
+      "sencilla2": "/img/habitaciones/sencilla2.jpg"
+    }
+  ]
+}

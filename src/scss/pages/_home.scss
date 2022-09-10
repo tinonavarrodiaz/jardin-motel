@@ -1,0 +1,106 @@
+.Home {
+  height: 100vh;
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    height:100vh
+  }
+}
+.Home{
+  height: 100vh;
+}
+.sliders{
+  height: calc(100vh - var(--header-height));
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    height:100vh
+  }
+  position: relative;
+  .img-slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: opacity .5s;
+    opacity: 0;
+    z-index: 1;
+    &.is-active{
+      opacity: 1;
+    }
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(#111,.5);
+    z-index: 5;
+  }
+  .main-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 400px;
+    max-width: 60%;
+  }
+}
+
+.bottom-bar{
+  height: var(--header-height);
+  background-color: #1c1e22;;
+  display: grid;
+  grid-template-columns: 100px 1fr auto;
+  @media screen and (max-width: 768px) and (orientation: portrait) {
+    position: relative;
+    transform: translateY(-100px);
+    z-index: 10000;
+  }
+  .arrows{
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    height: 100%;
+    .arrow{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      &:first-child{
+        border-right: 1px solid rgba(#fff,.1);
+      }
+      svg{
+        transform: scale(1.5);
+      }
+    }
+  }
+  .btn-menu{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .slider-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li{
+      background: var(--color-second);
+      width: .7em;
+      height: .7em;
+      margin-right: .5rem;
+      border-radius: 50%;
+      &.is-active{
+        background-color: var(--color-main);
+      }
+    }
+  }
+}
