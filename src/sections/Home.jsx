@@ -2,6 +2,7 @@ import image01 from '../img/slider-images/image01.jpg';
 import image02 from '../img/slider-images/image02.jpg';
 import image03 from '../img/slider-images/image03.jpg';
 import image04 from '../img/slider-images/image04.jpg';
+import axios from 'axios';
 import logo from '../img/logo2.png';
 import { BiChevronLeft, BiChevronRight } from 'react-icons/bi';
 import { useEffect, useRef, useState } from 'react';
@@ -16,6 +17,7 @@ const Home = () => {
   const [sliderImg, setSliderImg] = useState(null);
   const [dotEl, setDotEl] = useState(null);
   const [dotItems, setDotItems] = useState(null);
+  const [count, setCount] = useState(null);
 
   useEffect(() => {
     setSliderEl(sliders.current);
@@ -26,6 +28,15 @@ const Home = () => {
     setInterval(() => {
       buttonNext.current.click();
     }, 5000);
+    axios
+      .get('https://contador.up.railway.app/')
+      .then((res) => {
+        let c = res.data.cout;
+        setCount(c);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   const sliderActionNext = (e) => {
@@ -82,6 +93,11 @@ const Home = () => {
           />
         ))}
         <img src={logo} alt="Logotipo" className="main-logo" />
+      </div>
+
+      <div className="count">
+        {new Intl.NumberFormat('us-IN', {}).format(count)}
+        {/* {count} */}
       </div>
 
       <div className="bottom-bar">

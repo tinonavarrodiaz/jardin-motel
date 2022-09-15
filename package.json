@@ -7,11 +7,12 @@
     "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview --host",
-    "deploy" : "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@supabase/supabase-js": "^1.35.6",
     "aos": "^2.3.4",
+    "axios": "^0.27.2",
     "hamburgers": "^1.2.1",
     "html-react-parser": "^3.0.4",
     "react": "^18.2.0",
@@ -27,6 +28,7 @@
     "nh-grid": "^3.0.5",
     "postcss": "^8.4.16",
     "sass": "^1.54.8",
-    "vite": "^3.0.7"
+    "vite": "^3.0.7",
+    "vite-plugin-mkcert": "^1.9.0"
   }
 }

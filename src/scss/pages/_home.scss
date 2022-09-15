@@ -108,3 +108,12 @@
     }
   }
 }
+.count{
+  position: absolute;
+  top: 70px;
+  right: 12px;
+  // background-color: red;
+  z-index: 100;
+  width: 5.5em;
+  text-align: center;
+}
