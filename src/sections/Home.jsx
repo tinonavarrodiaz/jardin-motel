@@ -28,15 +28,15 @@ const Home = () => {
     setInterval(() => {
       buttonNext.current.click();
     }, 5000);
-    axios
-      .get('https://contador.up.railway.app/')
-      .then((res) => {
-        let c = res.data.cout;
-        setCount(c);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+    // axios
+    //   .get('https://contador.up.railway.app/')
+    //   .then((res) => {
+    //     let c = res.data.cout;
+    //     setCount(c);
+    //   })
+    //   .catch((err) => {
+    //     console.log(err);
+    // });
   }, []);
 
   const sliderActionNext = (e) => {
@@ -95,10 +95,10 @@ const Home = () => {
         <img src={logo} alt="Logotipo" className="main-logo" />
       </div>
 
-      <div className="count">
-        {new Intl.NumberFormat('us-IN', {}).format(count)}
-        {/* {count} */}
-      </div>
+      {/* <div className="count"> */}
+      {/* {new Intl.NumberFormat('us-IN', {}).format(count)} */}
+      {/* {count} */}
+      {/* </div> */}
 
       <div className="bottom-bar">
         <div className="arrows bg-dark">
